@@ -1,5 +1,5 @@
 # M.U.L.E.
-CS 2340 M.U.L.E. game for 1 << 5 (Team 32) 
+CS 2340 M.U.L.E. game for 0x1 << 5 (Team 32) 
 
 ##Team Members
 
