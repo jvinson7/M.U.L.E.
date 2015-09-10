@@ -18,15 +18,16 @@ public abstract class Controller {
 			URL url = loader.getResource(resourceName);
 			Parent root = null;
 			try {
-				root = FXMLLoader.load(url);
+				FXMLLoader fxLoader = new FXMLLoader();
+				fxLoader.setController(this);
+				fxLoader.setLocation(url);
+				root = fxLoader.load();
 			} catch (IOException e) {
 				System.out.println("Failed to create scene with resource name: " + resourceName);
-				System.out.println("Please make sure that the controller's resources folder is on the build path");
 				e.printStackTrace();
 			}
 			
 			scene = new Scene(root);
-			
 		}
 		return scene;
 	}
