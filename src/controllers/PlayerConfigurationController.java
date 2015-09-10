@@ -13,6 +13,11 @@ public class PlayerConfigurationController extends Controller {
 	
 	@Override
 	protected String getSceneResourceName() {
-		return "PlayerConfigurationScreen.fxml";
+		return "resources/PlayerConfigurationScreen.fxml";
+	}
+
+	@FXML
+	public void initialize() {
+		System.out.println("Initialize called");
 	}
 }
