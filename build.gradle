@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'main.Launcher.java'
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.+'
+  compile files('lib/resources.jar')
+}
+
+jar {
+  baseName = 'mule-package'
+  version = '0.1.1'
+  
+  manifest {
+    attributes 'Main-Class': 'main.Launcher.java'
+  }
+
+  from {
+    configurations.compile.collect{
+      it.isDirectory() ? it : zipTree(it);
+    }
+  } 
+}
+
