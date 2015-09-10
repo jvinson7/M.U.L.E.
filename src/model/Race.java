@@ -1,5 +1,9 @@
 package model;
 
+import com.sun.javafx.collections.ImmutableObservableList;
+
+import javafx.collections.ObservableList;
+
 /**
  * Race represents all of the possible races for players
  * @author Kevin Randrup
@@ -23,4 +27,6 @@ public enum Race {
 			return this.name();
 		}
 	}
+	
+	public static ObservableList<Race> allRaces = new ImmutableObservableList<Race>(Race.values());
 }
