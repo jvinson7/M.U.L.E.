@@ -1,5 +1,7 @@
 package model;
 
+import javafx.beans.binding.Bindings;
+import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -8,7 +10,14 @@ import javafx.beans.property.SimpleIntegerProperty;
 public class GameConfiguration {
 
   private ObjectProperty<Difficulty> difficulty = new SimpleObjectProperty<Difficulty>();
-  private IntegerProperty numberOfPlayers = new SimpleIntegerProperty();
+  private ObjectProperty<Integer> numberOfPlayers = new SimpleObjectProperty<Integer>();
+
+  public BooleanBinding isConfigured;
+
+  public GameConfiguration() {
+    isConfigured = Bindings.isNotNull(difficulty)
+      .and(Bindings.isNotNull(numberOfPlayers));
+  }
 
   @Override
   public String toString() {
@@ -21,7 +30,7 @@ public class GameConfiguration {
   // Property accessors.
   
   // Number of Players
-  public IntegerProperty numberOfPlayersProperty() {
+  public ObjectProperty<Integer> numberOfPlayersProperty() {
     return this.numberOfPlayers;
   }
   public Integer getNumberOfPlayers() {
