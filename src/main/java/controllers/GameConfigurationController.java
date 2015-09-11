@@ -20,17 +20,17 @@ public class GameConfigurationController extends Controller {
   }
 
   @FXML
+  public Button doneButton;
+
+  @FXML
+  public ChoiceBox numberOfPlayersSelector;
+
+  @FXML
+  public ChoiceBox difficultySelector;
+  
+  @FXML
   public void initialize() {
     // Populate difficulty box.
-    // difficultySelector.setItems(Difficulty.allDifficulties);
+    difficultySelector.getItems().setAll(Difficulty.allDifficulties);
   }
-
-  @FXML
-  private Button doneButton;
-
-  @FXML
-  private ChoiceBox numberOfPlayersSelector;
-
-  @FXML
-  private ChoiceBox difficultySelector;
 }
