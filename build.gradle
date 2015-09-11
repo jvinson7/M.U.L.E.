@@ -5,7 +5,16 @@ mainClassName = 'main.java.Launcher'
 
 dependencies {
   compile files('controllers/*.java')
-  compile files('resources/*.fxml')
+  runtime files('resources/*.fxml')
+}
+
+sourceSets {
+  main {
+    resources {
+      srcDirs += 'src/main/java'
+      exclude '**/*.java'
+    }
+  }
 }
 
 repositories {
