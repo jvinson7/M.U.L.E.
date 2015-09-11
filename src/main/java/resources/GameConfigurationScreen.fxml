@@ -55,7 +55,7 @@
         <Font name="Helvetica" size="70.0" />
       </font>
     </Label>
-    <Button fx:id="doneButton" layoutX="274.0" layoutY="349.0" mnemonicParsing="false" text="Done">
+    <Button fx:id="doneButton" onMouseClicked="#done" layoutX="274.0" layoutY="349.0" mnemonicParsing="false" text="Done">
          <font>
             <Font name="Helvetica" size="13.0" />
          </font></Button>
