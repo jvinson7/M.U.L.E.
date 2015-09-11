@@ -19,7 +19,7 @@ public class Launcher extends Application {
 	public void start(Stage primaryStage) {
 		
 		//Example configuration. This will be changed later.
-		PlayerConfigurationController controller = new PlayerConfigurationController(1);
+		PlayerConfigurationController controller = new PlayerConfigurationController(4);
 		Scene scene = controller.getScene();
 		primaryStage.setScene(scene);
 		primaryStage.show();		
