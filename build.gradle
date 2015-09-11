@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'main.java.Launcher'
+
+dependencies {
+  compile files('controllers/*.java')
+  runtime files('resources/*.fxml')
+}
+
+sourceSets {
+  main {
+    resources {
+      srcDirs += 'src/main/java'
+      exclude '**/*.java'
+    }
+  }
+}
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
