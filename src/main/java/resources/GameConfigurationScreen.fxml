@@ -9,17 +9,20 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFC300;&#10;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" blendMode="SRC_ATOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFC300;&#10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <GridPane layoutX="153.0" layoutY="268.0" prefHeight="60.0" prefWidth="297.0">
       <children>
         <Label prefWidth="210.0" text="Level of Play:" GridPane.columnIndex="0" GridPane.rowIndex="0">
           <font>
-            <Font name="Charter Black" size="13.0" fx:id="x1" />
+            <Font name="Helvetica Bold" size="13.0" fx:id="x1" />
           </font>
         </Label>
-        <Label font="$x1" prefWidth="210.0" text="Number of Players:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <ChoiceBox id="difficulty" fx:id="difficultySelector" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <Label prefWidth="210.0" text="Number of Players:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font></Label>
+        <ChoiceBox prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="Item 1" />
@@ -28,7 +31,7 @@
             </FXCollections>
           </items>
         </ChoiceBox>
-        <ChoiceBox id="numberOfPlayers" fx:id="numberOfPlayersSelector" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <ChoiceBox prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="Item 1" />
@@ -49,14 +52,12 @@
     </GridPane>
     <Label layoutX="148.0" layoutY="45.0" prefHeight="108.0" prefWidth="304.0" text="M.U.L.E." textAlignment="CENTER" textFill="#00a3ff" textOverrun="ELLIPSIS" wrapText="false">
       <font>
-        <Font name="Charter Black" size="70.0" />
+        <Font name="Helvetica" size="70.0" />
       </font>
     </Label>
-    <ImageView fitHeight="93.46153310827306" fitWidth="135.0" layoutX="233.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-        <Image url="file:/Users/raphael/Desktop/GT/CS%202340/dev/img/mule_main_menu.png" />
-      </image>
-    </ImageView>
-    <Button id="done" fx:id="doneButton" font="$x1" layoutX="274.0" layoutY="349.0" mnemonicParsing="false" text="Done" />
+    <Button layoutX="274.0" layoutY="349.0" mnemonicParsing="false" text="Done">
+         <font>
+            <Font name="Helvetica" size="13.0" />
+         </font></Button>
   </children>
 </AnchorPane>

@@ -16,7 +16,7 @@ public class GameConfigurationController extends Controller {
 
   @FXML
   protected String getSceneResourceName() {
-    return "resources/GameConfigurationScene.fxml";
+    return "resources/GameConfigurationScreen.fxml";
   }
 
   @FXML
