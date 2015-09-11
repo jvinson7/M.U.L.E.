@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import model.GameConfiguration;
+import model.Difficulty;
 
 public class GameConfigurationController extends Controller {
 
