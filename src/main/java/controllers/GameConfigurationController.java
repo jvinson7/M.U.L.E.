@@ -22,7 +22,7 @@ public class GameConfigurationController extends Controller {
   @FXML
   public void initialize() {
     // Populate difficulty box.
-    difficultySelector.setItems(Difficulty.allDifficulties);
+    // difficultySelector.setItems(Difficulty.allDifficulties);
   }
 
   @FXML
