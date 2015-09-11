@@ -1,6 +1,7 @@
 package main.java;
 
-import controllers.PlayerConfigurationController;
+// import controllers.PlayerConfigurationController;
+import controllers.GameConfigurationController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -19,8 +20,9 @@ public class Launcher extends Application {
 	public void start(Stage primaryStage) {
 		
 		//Example configuration. This will be changed later.
-		PlayerConfigurationController controller = new PlayerConfigurationController(4);
-		Scene scene = controller.getScene();
+		// PlayerConfigurationController controller = new PlayerConfigurationController(4);
+		GameConfigurationController controller = new GameConfigurationController();
+    Scene scene = controller.getScene();
 		primaryStage.setScene(scene);
 		primaryStage.show();		
 	}	
