@@ -1,5 +1,6 @@
 package controllers;
 
+import main.java.FlowHandler;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,11 +25,13 @@ import model.PlayerConfiguration;
  * @author Kevin Randrup
  */
 public class PlayerConfigurationController extends Controller {
-	
+
 	private List<PlayerConfiguration> playerConfigs;
 	private PlayerConfiguration currentConfiguration;
-	
-	public PlayerConfigurationController(Integer playerCount) {
+	private FlowHandler flowHandler;
+
+	public PlayerConfigurationController(Integer playerCount, FlowHandler flowHandler) {
+		this.flowHandler = flowHandler;
 		playerConfigs = new ArrayList<>();
 		for (int i = 0; i < playerCount; i++) {
 			PlayerConfiguration config = new PlayerConfiguration();
@@ -36,22 +39,22 @@ public class PlayerConfigurationController extends Controller {
 			playerConfigs.add(config);
 		}
 	}
-	
+
 	@FXML
 	private Button doneButton;
-	
+
 	@FXML
 	private TextField nameTextField;
-	
+
 	@FXML
 	private ColorPicker colorPicker;
-	
+
 	@FXML
 	private ComboBox<Race> raceComboBox;
 
 	@FXML
 	private ButtonBar buttonBar;
-			
+
 	@Override
 	protected String getSceneResourceName() {
 		return "resources/PlayerConfigurationScreen.fxml";
@@ -76,11 +79,11 @@ public class PlayerConfigurationController extends Controller {
 					}
 				}
 			});
-			
+
 			//Add button
 			ButtonBar.setButtonData(playerButton, ButtonData.LEFT);
 			buttonBar.getButtons().add(playerButton);
-			
+
 			//When a button is tapped then change the current configuration
 			playerButton.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
@@ -90,13 +93,13 @@ public class PlayerConfigurationController extends Controller {
 				}
 			});
 		}
-		
+
 		//Populate the race box
 		raceComboBox.setItems(Race.allRaces);
-		
+
 		//Initial setup of player configuration
 		showConfig(playerConfigs.get(0));
-		
+
 		//When all of the PlayerConfigurations are configured, enabled the done button
 		BooleanBinding allConfigured = null;
 		for (PlayerConfiguration config : playerConfigs) {
@@ -108,35 +111,35 @@ public class PlayerConfigurationController extends Controller {
 		}
 		doneButton.disableProperty().bind(allConfigured.not());
 	}
-		
+
 	/**
 	 * Changes the user interface to show a different player configuration
 	 * @param config any PlayerConfiguration
 	 */
 	private void showConfig(PlayerConfiguration config) {
-		
+
 		if (currentConfiguration == config) return;
-		
+
 		//Remove old bindings if they exist
 		if (currentConfiguration != null) {
 			currentConfiguration.nameProperty().unbindBidirectional(nameTextField.textProperty());
 			currentConfiguration.raceProperty().unbindBidirectional(raceComboBox.valueProperty());
 			currentConfiguration.colorProperty().unbindBidirectional(colorPicker.valueProperty());
 		}
-		
+
 		//Set the properties
 		nameTextField.setText(config.getName());
 		raceComboBox.setValue(config.getRace());
 		colorPicker.setValue(config.getColor());
-		
+
 		//Bind the new configuration to our UI
 		config.nameProperty().bindBidirectional(nameTextField.textProperty());
 		config.raceProperty().bindBidirectional(raceComboBox.valueProperty());
 		config.colorProperty().bindBidirectional(colorPicker.valueProperty());
-		
+
 		currentConfiguration = config;
 	}
-	
+
 	@FXML
 	private void done(Event event) {
 		System.out.println("Done pressed. Event: " + event);
