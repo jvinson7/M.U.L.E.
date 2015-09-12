@@ -1,6 +1,11 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
+
 mainClassName = 'main.java.Launcher'
 
 dependencies {
@@ -15,9 +20,4 @@ sourceSets {
       exclude '**/*.java'
     }
   }
-}
-
-repositories {
-  mavenCentral()
-  mavenLocal()
 }
