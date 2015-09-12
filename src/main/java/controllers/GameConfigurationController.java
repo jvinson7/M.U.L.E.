@@ -58,6 +58,6 @@ public class GameConfigurationController extends Controller {
   @FXML
   private void done(Event event) {
     System.out.println("Done pressed. Event: " + event);
-    flowHandler.configurePlayers(gameConfig.getNumberOfPlayers(), gameConfig.getDifficulty());
+    flowHandler.configurePlayers(gameConfig);
   }
 }

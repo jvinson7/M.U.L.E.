@@ -143,5 +143,6 @@ public class PlayerConfigurationController extends Controller {
 	@FXML
 	private void done(Event event) {
 		System.out.println("Done pressed. Event: " + event);
+		flowHandler.startGame(playerConfigs);
 	}
 }
