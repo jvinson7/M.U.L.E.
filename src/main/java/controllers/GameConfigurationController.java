@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import model.GameConfiguration;
 import model.Difficulty;
+import model.LevelMap;
 
 public class GameConfigurationController extends Controller {
 
@@ -32,6 +33,9 @@ public class GameConfigurationController extends Controller {
   public ChoiceBox difficultySelector;
   
   @FXML
+  public ChoiceBox levelMapSelector;
+  
+  @FXML
   public void initialize() {
     // Populate difficulty box.
     difficultySelector.getItems().setAll(Difficulty.allDifficulties);
@@ -39,7 +43,10 @@ public class GameConfigurationController extends Controller {
     // Populate number of players box.
     numberOfPlayersSelector.getItems()
       .setAll(new ImmutableObservableList<Integer>(1, 2, 3, 4));
-  
+ 
+    // Populate level map box.
+    levelMapSelector.getItems().setAll(LevelMap.allLevelMaps);
+
     // Enable done button when a difficulty and the number of players have been
     // selected.
     BooleanBinding gameConfigured = gameConfig.isConfigured;
@@ -50,6 +57,8 @@ public class GameConfigurationController extends Controller {
       .bindBidirectional(numberOfPlayersSelector.valueProperty());
     gameConfig.difficultyProperty()
       .bindBidirectional(difficultySelector.valueProperty());
+    gameConfig.levelMapProperty()
+      .bindBidirectional(levelMapSelector.valueProperty());
   }
 
   @FXML

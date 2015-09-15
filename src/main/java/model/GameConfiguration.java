@@ -12,19 +12,23 @@ public class GameConfiguration {
   private ObjectProperty<Difficulty> difficulty = new SimpleObjectProperty<Difficulty>();
   private ObjectProperty<Integer> numberOfPlayers = new SimpleObjectProperty<Integer>();
 
+  private ObjectProperty<LevelMap> levelMap = new SimpleObjectProperty<LevelMap>();
+
   public BooleanBinding isConfigured;
 
   public GameConfiguration() {
     isConfigured = Bindings.isNotNull(difficulty)
-      .and(Bindings.isNotNull(numberOfPlayers));
+      .and(Bindings.isNotNull(numberOfPlayers))
+      .and(Bindings.isNotNull(levelMap));
   }
 
   @Override
   public String toString() {
     return super.toString()
       + " with " + numberOfPlayers.getValue()
-      + " players and " + difficulty.getValue()
-      + " difficulty.";
+      + " players, " + difficulty.getValue()
+      + " difficulty, and " + levelMap.getValue()
+      + " level map.";
   }
 
   // Property accessors.
@@ -49,5 +53,16 @@ public class GameConfiguration {
   }
   public void setDifficulty(final Difficulty difficulty) {
     this.difficultyProperty().set(difficulty);
+  }
+
+  // LevelMap
+  public ObjectProperty<LevelMap> levelMapProperty() {
+    return this.levelMap;
+  }
+  public LevelMap getLevelMap() {
+    return this.levelMapProperty().getValue();
+  }
+  public void setLevelMap(final LevelMap levelMap) {
+    this.levelMapProperty().set(levelMap);
   }
 }
