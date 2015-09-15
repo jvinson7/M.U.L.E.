@@ -28,7 +28,7 @@ public class GameConfiguration {
   }
 
   // Property accessors.
-  
+
   // Number of Players
   public ObjectProperty<Integer> numberOfPlayersProperty() {
     return this.numberOfPlayers;

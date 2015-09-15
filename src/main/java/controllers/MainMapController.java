@@ -3,10 +3,19 @@ package controllers;
 import main.java.FlowHandler;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
+import javafx.event.Event;
 
 
 
 public class MainMapController extends Controller {
+
+  private FlowHandler flowHandler;
+
+  public MainMapController(FlowHandler flowHandler){
+
+    this.flowHandler = flowHandler;
+
+  }
 
   @FXML
   protected String getSceneResourceName() {

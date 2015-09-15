@@ -14,6 +14,7 @@ public abstract class Controller {
 	public Scene getScene() {
 		if (scene == null) {
 			String resourceName = getSceneResourceName();
+			System.out.println(resourceName);
 			ClassLoader loader = getClass().getClassLoader();
 			URL url = loader.getResource(resourceName);
 			Parent root = null;
