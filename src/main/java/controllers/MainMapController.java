@@ -1,14 +1,10 @@
 package controllers;
 
 import main.java.FlowHandler;
-import com.sun.javafx.collections.ImmutableObservableList;
-import javafx.beans.binding.BooleanBinding;
-import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import model.GameConfiguration;
-import model.Difficulty;
+import javafx.scene.image.ImageView;
+
+
 
 public class MainMapController extends Controller {
 
@@ -20,5 +16,9 @@ public class MainMapController extends Controller {
   @FXML
   public ImageView townView;
 
-
+  @FXML
+  private void enterTown(Event event) {
+    System.out.println("Done pressed. Event: " + event);
+    flowHandler.goToTown();
+  }
 }

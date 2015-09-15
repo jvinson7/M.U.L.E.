@@ -3,6 +3,7 @@ package main.java;
 import controllers.GameConfigurationController;
 import controllers.PlayerConfigurationController;
 import controllers.Controller;
+import controllers.MainMapController;
 import model.GameConfiguration;
 import model.PlayerConfiguration;
 import javafx.application.Application;
@@ -24,6 +25,7 @@ public class FlowHandler {
   private Stage primaryStage;
   private GameConfiguration gameConfig;
   private List<PlayerConfiguration> playerConfigs;
+  private MainMapController mainMapController;
 
 	public FlowHandler(Stage primaryStage) {
     this.primaryStage = primaryStage;
@@ -43,7 +45,13 @@ public class FlowHandler {
 
   public void startGame(List<PlayerConfiguration> playerConfigs) {
     this.playerConfigs = playerConfigs;
+    mainMapController = new MainMapController();
+    switchScene(mainMapController);
 
+  }
+
+  public void goToTown(){
+    
   }
 
   private void switchScene(Controller c) {
