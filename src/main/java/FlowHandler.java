@@ -43,26 +43,7 @@ public class FlowHandler {
 
   public void startGame(List<PlayerConfiguration> playerConfigs) {
     this.playerConfigs = playerConfigs;
-    System.out.println("success!");
 
-    String resourceName = "resources/FillerScreen.fxml";
-    ClassLoader loader = getClass().getClassLoader();
-    URL url = loader.getResource(resourceName);
-    Parent root = null;
-    try {
-      FXMLLoader fxLoader = new FXMLLoader();
-      fxLoader.setController(this);
-      fxLoader.setLocation(url);
-      root = fxLoader.load();
-
-      Scene scene = new Scene(root, 300, 275);
-      primaryStage.setTitle("Filler Page");
-      primaryStage.setScene(scene);
-      primaryStage.show();
-    } catch (IOException e) {
-      System.out.println("Failed to create scene with resource name: " + resourceName);
-      e.printStackTrace();
-    }
   }
 
   private void switchScene(Controller c) {

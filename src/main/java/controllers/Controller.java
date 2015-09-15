@@ -8,9 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.Parent;
 
 public abstract class Controller {
-	
+
 	protected Scene scene;
-	
+
 	public Scene getScene() {
 		if (scene == null) {
 			String resourceName = getSceneResourceName();
@@ -26,12 +26,12 @@ public abstract class Controller {
 				System.out.println("Failed to create scene with resource name: " + resourceName);
 				e.printStackTrace();
 			}
-			
+
 			scene = new Scene(root);
 		}
 		return scene;
 	}
-	
+
 	/**
 	 * Subclasses must override this method to provide a fxml document to load the scene from.
 	 * @return "ResourceName.fxml"
