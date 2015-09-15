@@ -1,5 +1,6 @@
 package controllers;
 
+import main.java.FlowHandler;
 import com.sun.javafx.collections.ImmutableObservableList;
 import javafx.beans.binding.BooleanBinding;
 import javafx.event.Event;
@@ -12,8 +13,10 @@ import model.Difficulty;
 public class GameConfigurationController extends Controller {
 
   private GameConfiguration gameConfig;
+  private FlowHandler flowHandler;
 
-  public GameConfigurationController() {
+  public GameConfigurationController(FlowHandler flowHandler) {
+    this.flowHandler = flowHandler;
     gameConfig = new GameConfiguration();
   }
 
@@ -30,7 +33,7 @@ public class GameConfigurationController extends Controller {
 
   @FXML
   public ChoiceBox difficultySelector;
-  
+
   @FXML
   public void initialize() {
     // Populate difficulty box.
@@ -39,7 +42,7 @@ public class GameConfigurationController extends Controller {
     // Populate number of players box.
     numberOfPlayersSelector.getItems()
       .setAll(new ImmutableObservableList<Integer>(1, 2, 3, 4));
-  
+
     // Enable done button when a difficulty and the number of players have been
     // selected.
     BooleanBinding gameConfigured = gameConfig.isConfigured;
@@ -55,5 +58,6 @@ public class GameConfigurationController extends Controller {
   @FXML
   private void done(Event event) {
     System.out.println("Done pressed. Event: " + event);
+    flowHandler.configurePlayers(gameConfig);
   }
 }
