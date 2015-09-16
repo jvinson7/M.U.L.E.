@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" blendMode="SRC_ATOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFC300;&#10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <GridPane layoutX="153.0" layoutY="268.0" prefHeight="60.0" prefWidth="297.0">
+    <GridPane layoutX="153.0" layoutY="251.0" prefHeight="77.0" prefWidth="297.0">
       <children>
         <Label prefWidth="210.0" text="Level of Play:" GridPane.columnIndex="0" GridPane.rowIndex="0">
           <font>
@@ -40,6 +40,12 @@
             </FXCollections>
           </items>
         </ChoiceBox>
+            <Label text="Level Map:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="levelMapSelector" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       </children>
       <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -48,6 +54,7 @@
       <rowConstraints>
         <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       </rowConstraints>
     </GridPane>
     <Label layoutX="148.0" layoutY="45.0" prefHeight="108.0" prefWidth="304.0" text="M.U.L.E." textAlignment="CENTER" textFill="#00a3ff" textOverrun="ELLIPSIS" wrapText="false">
@@ -55,7 +62,7 @@
         <Font name="Helvetica" size="70.0" />
       </font>
     </Label>
-    <Button fx:id="doneButton" onMouseClicked="#done" layoutX="274.0" layoutY="349.0" mnemonicParsing="false" text="Done">
+    <Button fx:id="doneButton" layoutX="274.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#done" text="Done">
          <font>
             <Font name="Helvetica" size="13.0" />
          </font></Button>
