@@ -1,6 +1,6 @@
 package main.java;
 
-import main.java.FlowHandler;
+import main.java.GameController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -17,7 +17,7 @@ public class Launcher extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
-		FlowHandler flowHandler = new FlowHandler(primaryStage);
-		flowHandler.configureGame();
+		GameController gameController = new GameController(primaryStage);
+		gameController.configureGame();
 	}
 }

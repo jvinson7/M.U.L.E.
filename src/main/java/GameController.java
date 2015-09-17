@@ -1,5 +1,6 @@
 package main.java;
 
+import main.java.GameplayController;
 import controllers.*;
 import model.GameConfiguration;
 import model.PlayerConfiguration;
@@ -15,38 +16,53 @@ import java.net.URL;
 import java.io.IOException;
 
 /**
- * The FlowHandler maps events between screens so everything works nicely
+ * The GameController deals with game configuration, kicking off gameplay, and ending the game
  * @author Maximillian von Briesen
  */
-public class FlowHandler {
-  private Stage primaryStage;
+public class GameController {
+  // configurations
   private GameConfiguration gameConfig;
   private List<PlayerConfiguration> playerConfigs;
+
+  // controllers
+  private GameplayController gameplayController;
+  private GameConfigurationController gameConfigController;
+  private PlayerConfigurationController playerConfigController;
   private MainMapController mainMapController;
   private TownController townController;
 
-	public FlowHandler(Stage primaryStage) {
+  // other
+  private Stage primaryStage;
+
+	public GameController(Stage primaryStage) {
     this.primaryStage = primaryStage;
   }
 
   public void configureGame() {
-    GameConfigurationController gameConfig = new GameConfigurationController(this);
-    switchScene(gameConfig);
+    gameConfigController = new GameConfigurationController(this);
+    switchScene(gameConfigController);
   }
 
-  public void configurePlayers(GameConfiguration gameConfig) {
+  public void doneConfiguringGame(GameConfiguration gameConfig) {
     this.gameConfig = gameConfig;
-    int numPlayers = gameConfig.getNumberOfPlayers();
-    PlayerConfigurationController playerConfig = new PlayerConfigurationController(numPlayers, this);
-    switchScene(playerConfig);
+    configurePlayers();
   }
 
-  public void startGame(List<PlayerConfiguration> playerConfigs) {
+  public void configurePlayers() {
+    int numPlayers = gameConfig.getNumberOfPlayers();
+    playerConfigController = new PlayerConfigurationController(numPlayers, this);
+    switchScene(playerConfigController);
+  }
+
+  public void doneConfiguringPlayers(List<PlayerConfiguration> playerConfigs) {
     this.playerConfigs = playerConfigs;
+    startGame();
+  }
+
+  public void startGame() {
     mainMapController = new MainMapController(this);
     townController = new TownController(this);
     switchScene(mainMapController);
-
   }
 
   public void goToTown(){

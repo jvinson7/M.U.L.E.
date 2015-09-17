@@ -1,6 +1,6 @@
 package controllers;
 
-import main.java.FlowHandler;
+import main.java.GameController;
 import com.sun.javafx.collections.ImmutableObservableList;
 import javafx.beans.binding.BooleanBinding;
 import javafx.event.Event;
