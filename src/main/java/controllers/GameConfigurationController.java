@@ -1,6 +1,6 @@
 package controllers;
 
-import main.java.FlowHandler;
+import main.java.GameController;
 import com.sun.javafx.collections.ImmutableObservableList;
 import javafx.beans.binding.BooleanBinding;
 import javafx.event.Event;
@@ -14,10 +14,10 @@ import model.LevelMap;
 public class GameConfigurationController extends Controller {
 
   private GameConfiguration gameConfig;
-  private FlowHandler flowHandler;
+  private GameController gameController;
 
-  public GameConfigurationController(FlowHandler flowHandler) {
-    this.flowHandler = flowHandler;
+  public GameConfigurationController(GameController gameController) {
+    this.gameController = gameController;
     gameConfig = new GameConfiguration();
   }
 
@@ -37,7 +37,7 @@ public class GameConfigurationController extends Controller {
 
   @FXML
   public ChoiceBox levelMapSelector;
-  
+
   @FXML
   public void initialize() {
     // Populate difficulty box.
@@ -46,7 +46,7 @@ public class GameConfigurationController extends Controller {
     // Populate number of players box.
     numberOfPlayersSelector.getItems()
       .setAll(new ImmutableObservableList<Integer>(1, 2, 3, 4));
- 
+
     // Populate level map box.
     levelMapSelector.getItems().setAll(LevelMap.allLevelMaps);
 
@@ -67,6 +67,6 @@ public class GameConfigurationController extends Controller {
   @FXML
   private void done(Event event) {
     System.out.println("Done pressed. Event: " + event);
-    flowHandler.configurePlayers(gameConfig);
+    gameController.doneConfiguringGame(gameConfig);
   }
 }

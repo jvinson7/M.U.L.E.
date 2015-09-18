@@ -1,6 +1,6 @@
 package controllers;
 
-import main.java.FlowHandler;
+import main.java.GameController;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,10 +28,10 @@ public class PlayerConfigurationController extends Controller {
 
 	private List<PlayerConfiguration> playerConfigs;
 	private PlayerConfiguration currentConfiguration;
-	private FlowHandler flowHandler;
+	private GameController gameController;
 
-	public PlayerConfigurationController(Integer playerCount, FlowHandler flowHandler) {
-		this.flowHandler = flowHandler;
+	public PlayerConfigurationController(Integer playerCount, GameController gameController) {
+		this.gameController = gameController;
 		playerConfigs = new ArrayList<>();
 		for (int i = 0; i < playerCount; i++) {
 			PlayerConfiguration config = new PlayerConfiguration();
@@ -143,6 +143,6 @@ public class PlayerConfigurationController extends Controller {
 	@FXML
 	private void done(Event event) {
 		System.out.println("Done pressed. Event: " + event);
-		flowHandler.startGame(playerConfigs);
+		gameController.doneConfiguringPlayers(playerConfigs);
 	}
 }

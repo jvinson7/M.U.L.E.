@@ -14,7 +14,7 @@ public enum Race {
 	FirBolg,
 	SpaceCowboy,
 	SpacePirate;
-	
+
 	@Override
 	public String toString() {
 		if (this == FirBolg) {
@@ -27,6 +27,6 @@ public enum Race {
 			return this.name();
 		}
 	}
-	
+
 	public static ObservableList<Race> allRaces = new ImmutableObservableList<Race>(Race.values());
 }
