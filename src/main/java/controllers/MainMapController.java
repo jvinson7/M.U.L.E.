@@ -1,6 +1,6 @@
 package controllers;
 
-import main.java.GameController;
+import main.java.GameplayController;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.event.Event;
@@ -9,10 +9,10 @@ import javafx.event.Event;
 
 public class MainMapController extends Controller {
 
-  private GameController gameController;
+  private GameplayController gameplayController;
 
-  public MainMapController(GameController gameController) {
-    this.gameController = gameController;
+  public MainMapController(GameplayController gameplayController) {
+    this.gameplayController = gameplayController;
   }
 
   @FXML
@@ -26,6 +26,6 @@ public class MainMapController extends Controller {
   @FXML
   private void enterTown(Event event) {
     System.out.println("Done pressed. Event: " + event);
-    gameController.goToTown();
+    gameplayController.goToTown();
   }
 }

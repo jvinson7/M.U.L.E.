@@ -28,8 +28,6 @@ public class GameController {
   private GameplayController gameplayController;
   private GameConfigurationController gameConfigController;
   private PlayerConfigurationController playerConfigController;
-  private MainMapController mainMapController;
-  private TownController townController;
 
   // other
   private Stage primaryStage;
@@ -60,17 +58,8 @@ public class GameController {
   }
 
   public void startGame() {
-    mainMapController = new MainMapController(this);
-    townController = new TownController(this);
-    switchScene(mainMapController);
-  }
-
-  public void goToTown(){
-    switchScene(townController);
-  }
-
-  public void viewMainMap(){
-    switchScene(mainMapController);
+    gameplayController = new GameplayController(primaryStage, gameConfig, playerConfigs);
+    gameplayController.startGame();
   }
 
   private void switchScene(Controller c) {

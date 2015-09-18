@@ -1,6 +1,6 @@
 package controllers;
 
-import main.java.GameController;
+import main.java.GameplayController;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.event.Event;
@@ -8,10 +8,10 @@ import javafx.event.Event;
 
 public class TownController extends Controller {
 
-  private GameController gameController;
+  private GameplayController gameplayController;
 
-  public TownController(GameController gameController){
-    this.gameController = gameController;
+  public TownController(GameplayController gameplayController){
+    this.gameplayController = gameplayController;
   }
 
   @FXML
@@ -21,7 +21,7 @@ public class TownController extends Controller {
 
   @FXML
   public void viewMainMap(Event event){
-    gameController.viewMainMap();
+    gameplayController.viewMainMap();
   }
 
 
