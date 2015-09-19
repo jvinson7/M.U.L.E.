@@ -39,4 +39,8 @@ public class GameplayController {
     primaryStage.setScene(scene);
     primaryStage.show();
   }
+
+  private void grantLand(Plot plot, PlayerConfiguration player) {
+      plot.setOwner(player);
+  }
 }
