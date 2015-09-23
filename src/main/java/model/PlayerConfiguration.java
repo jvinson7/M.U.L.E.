@@ -68,7 +68,7 @@ public class PlayerConfiguration {
 		if (this.funds.get() - amount < 0) {
 			return false;
 		}
-		this.funds.set(this.funds.get() - amount);
+		this.funds.setValue(this.funds.get() - amount);
 		return true;
 	}
 
