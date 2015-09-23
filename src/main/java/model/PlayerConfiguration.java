@@ -18,12 +18,13 @@ public class PlayerConfiguration {
 	private StringProperty name = new SimpleStringProperty();
 	private ObjectProperty<Color> color = new SimpleObjectProperty<Color>();
 	private ObjectProperty<Race> race = new SimpleObjectProperty<Race>();
-
+	private IntegerProperty<Integer> funds = new SimpleIntegerProprty<Integer>();
 	public BooleanBinding isConfigured;
 
 	public PlayerConfiguration() {
 		BooleanBinding colorAndRace = Bindings.isNotNull(color).and(Bindings.isNotNull(race));
 		BooleanBinding validName = Bindings.lessThanOrEqual(4, name.length());
+
 		isConfigured = colorAndRace.and(validName);
 	}
 
@@ -57,6 +58,18 @@ public class PlayerConfiguration {
 	}
 	public void setColor(final javafx.scene.paint.Color color) {
 		this.colorProperty().set(color);
+	}
+
+	public IntegerProperty getFunds() {
+		return this.funds;
+	}
+
+	public boolean deductFunds(int amount) {
+		if (this.funds.get() - amount < 0) {
+			return false;
+		}
+		this.funds.set(this.funds.get() - amount);
+		return true;
 	}
 
 

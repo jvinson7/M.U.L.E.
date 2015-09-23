@@ -13,6 +13,11 @@ public class GameplayController {
   private List<PlayerConfiguration> playerConfigs;
   private MainMapController mainMapController;
   private TownController townController;
+  private int turn;
+  private boolean propertySelectedThisTurn = false; //default value
+                                                    //reset when turn increments.
+  private int playerTurn = 0; //go to 0 to playerConfigs.size() of List.
+                              //reset to 0 and increment turn when done.
 
   public GameplayController(Stage primaryStage, GameConfiguration gameConfig, List<PlayerConfiguration> playerConfigs) {
     this.primaryStage = primaryStage;
@@ -23,6 +28,7 @@ public class GameplayController {
   public void startGame() {
     mainMapController = new MainMapController(this);
     townController = new TownController(this);
+    turn = 1;
     switchScene(mainMapController);
   }
 
@@ -32,6 +38,7 @@ public class GameplayController {
 
   public void viewMainMap() {
     switchScene(mainMapController);
+
   }
 
   private void switchScene(Controller c) {
@@ -40,7 +47,20 @@ public class GameplayController {
     primaryStage.show();
   }
 
-  private void grantLand(Plot plot, PlayerConfiguration player) {
+  private boolean grantLand(Plot plot, PlayerConfiguration player) {
+    if (turn <= 2) {
+      if (plot.getOwner() == null) {
+        propertySelectedThisTurn = true;
+        plot.setOwner(player);
+        return true;
+      }
+      return false;
+    }
+    if (plot.getOwner() == null && player.deductFunds(300)) {
       plot.setOwner(player);
+      propertySelectedThisTurn = true;
+      return true;
+    }
+    return false;
   }
 }
