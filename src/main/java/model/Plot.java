@@ -2,7 +2,8 @@ package model;
 
 public class Plot {
   private int[] position;
-  private PlayerConfiguration owner;
+  private final PlayerConfiguration owner;
+  private boolean town = false;
 
   public Plot(int x, int y) {
     position = new int[2];
@@ -16,5 +17,13 @@ public class Plot {
 
   public PlayerConfiguration getOwner() {
       return owner;
+  }
+
+  public void setTown() {
+      town = true;
+  }
+
+  public boolean isTown() {
+    return town;
   }
 }

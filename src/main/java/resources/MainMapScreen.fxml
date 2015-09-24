@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
@@ -27,13 +30,515 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <MeshView GridPane.columnIndex="5" GridPane.rowIndex="3" />
-      <ImageView fx:id="townView" onMouseClicked="#enterTown" fitHeight="60.0" fitWidth="55.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+      <MeshView GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <ImageView fx:id="townView" fitHeight="60.0" fitWidth="55.0" onMouseClicked="#enterTown" GridPane.columnIndex="5" GridPane.rowIndex="4">
          <image>
             <Image url="@images/future-city.jpg" />
          </image>
       </ImageView>
+      <Canvas fx:id="plot0" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot1" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot2" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot3" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot4" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot5" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot6" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot7" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot8" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot9" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot10" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot11" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot20" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot17" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot19" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot15" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot16" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot14" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot13" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot18" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot21" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot12" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot22" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot43" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot42" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot41" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot40" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot39" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot38" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot59" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot58" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot57" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot56" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot37" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot32" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot31" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot30" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot29" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot28" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot27" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot26" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot25" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot24" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot23" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot55" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot76" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot75" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot74" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot73" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot65" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot63" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plo64" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot61" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot62" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot71" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot72" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot70" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot69" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot68" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot67" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot66" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.rowIndex="6">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot60" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot36" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot35" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot34" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot33" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.rowIndex="3">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot87" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot97" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot96" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot86" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot95" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot94" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot93" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="5" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot85" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot84" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot913" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot1013" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot83" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot82" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="5" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot92" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot91" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot90" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot89" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot88" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot81" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot79" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot78" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot80" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot77" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.rowIndex="7">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot45" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot44" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot46" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot47" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot48" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot50" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot51" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot53" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="9" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot52" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot54" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10" GridPane.rowIndex="4">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
+      <Canvas fx:id="plot98" height="47.0" nodeOrientation="INHERIT" onMouseClicked="#grantLand" width="55.0" GridPane.columnIndex="10" GridPane.rowIndex="8">
+         <effect>
+            <ColorInput height="47.0" paint="#d3d2d2" width="55.0" />
+         </effect>
+      </Canvas>
    </children>
 </GridPane>

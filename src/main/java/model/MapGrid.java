@@ -8,4 +8,5 @@ public class MapGrid {
   public MapGrid(int height, int width) {
     grid = new Plot[height][width];
   }
+
 }
