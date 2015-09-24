@@ -61,8 +61,6 @@ public class GameplayController {
     if(++playerTurn >= playerConfigs.size()){
       playerTurn = 0;
       round++;
-    } else {
-      playerTurn++;
     }
   }
 }

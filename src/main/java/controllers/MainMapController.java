@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.event.Event;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
 
 import java.lang.Integer;
 
@@ -52,16 +53,26 @@ public class MainMapController extends Controller {
       Plot plot = plots[loc/11][loc%11];
       PlayerConfiguration player = gameplayController.getCurrentPlayer();
 
+
       if (gameplayController.getRound() <= 2 && plot.getOwner() == null) {
+        System.out.println(colorString(player.getColor()));
           plot.setOwner(player);
           canvas.getGraphicsContext2D().setFill(player.getColor());
+          canvas.getGraphicsContext2D().fill();
+          canvas.getGraphicsContext2D().stroke();
           gameplayController.endPlayerTurn();
       }
       if (plot.getOwner() == null && player.deductFunds(300)) {
         plot.setOwner(player);
         canvas.getGraphicsContext2D().setFill(player.getColor());
+        canvas.getGraphicsContext2D().fill();
+        canvas.getGraphicsContext2D().stroke();
         gameplayController.endPlayerTurn();
       }
+  }
+
+  private String colorString(Color color){
+    return "" + color.getBlue() + " " + color.getRed() + " " + color.getGreen();
   }
 
 }
