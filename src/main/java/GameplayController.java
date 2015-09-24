@@ -2,10 +2,12 @@ package main.java;
 
 import controllers.*;
 import model.GameConfiguration;
+import model.Plot;
 import model.PlayerConfiguration;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import java.util.List;
+
 
 public class GameplayController {
   private Stage primaryStage;
@@ -15,8 +17,8 @@ public class GameplayController {
   private TownController townController;
   private int round;
   private boolean propertySelectedThisTurn = false;
-  private int playerTurn = 0; .
-  private PlayerConfiguration player;
+
+  private int playerTurn = 0;
 
 
   public GameplayController(Stage primaryStage, GameConfiguration gameConfig, List<PlayerConfiguration> playerConfigs) {
@@ -29,7 +31,6 @@ public class GameplayController {
     mainMapController = new MainMapController(this);
     townController = new TownController(this);
     round = 1;
-    player = playerConfigs.get(0);
     switchScene(mainMapController);
   }
 
@@ -48,19 +49,20 @@ public class GameplayController {
     primaryStage.show();
   }
 
-  public PlayerConfiguration getCurrentPlayer() {
-      return player;
+  public PlayerConfiguration getCurrentPlayer(){
+    return playerConfigs.get(playerTurn);
   }
 
-  public void endPlayerTurn() {
-      if (++playerTurn >= playerConfigs.size()) {
-          playerTurn = 0;
-          round++;
-      }
-      player = playerConfigs.get(playerTurn);
+  public int getRound(){
+    return round;
   }
 
-  public int getRound() {
-      return round;
+  public void endPlayerTurn(){
+    if(++playerTurn >= playerConfigs.size()){
+      playerTurn = 0;
+      round++;
+    } else {
+      playerTurn++;
+    }
   }
 }

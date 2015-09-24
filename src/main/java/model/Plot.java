@@ -2,7 +2,7 @@ package model;
 
 public class Plot {
   private int[] position;
-  private final PlayerConfiguration owner;
+  private PlayerConfiguration owner;
   private boolean town = false;
 
   public Plot(int x, int y) {

@@ -5,8 +5,11 @@ import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.paint.Color;
+import javafx.beans.property.IntegerProperty;
+import java.lang.Integer;
 
 /**
  * The PlayerConfiguration stores infrequently changed player settings.
@@ -18,7 +21,7 @@ public class PlayerConfiguration {
 	private StringProperty name = new SimpleStringProperty();
 	private ObjectProperty<Color> color = new SimpleObjectProperty<Color>();
 	private ObjectProperty<Race> race = new SimpleObjectProperty<Race>();
-	private IntegerProperty<Integer> funds = new SimpleIntegerProprty<Integer>();
+	private IntegerProperty funds = new SimpleIntegerProperty();
 	public BooleanBinding isConfigured;
 
 	public PlayerConfiguration() {
