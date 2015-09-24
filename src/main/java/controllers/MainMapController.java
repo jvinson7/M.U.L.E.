@@ -8,6 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.event.Event;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.paint.Color;
+import javafx.scene.layout.Pane;
+import javafx.scene.effect.ColorInput;
 
 import java.lang.Integer;
 
@@ -45,7 +47,7 @@ public class MainMapController extends Controller {
   @FXML
   private void grantLand(Event event) {
     System.out.println("SOmething happened");
-       Canvas canvas = (Canvas) (event.getSource());
+       Canvas canvas = (Canvas) (event.getTarget());
        String id = canvas.getId();
        System.out.println(id);
        int loc = Integer.parseInt(id.substring(4));
@@ -57,16 +59,11 @@ public class MainMapController extends Controller {
       if (gameplayController.getRound() <= 2 && plot.getOwner() == null) {
         System.out.println(colorString(player.getColor()));
           plot.setOwner(player);
-          canvas.getGraphicsContext2D().setFill(player.getColor());
-          canvas.getGraphicsContext2D().fill();
-          canvas.getGraphicsContext2D().stroke();
+          canvas.setEffect(new ColorInput(0,0,47.0, 55.0,player.getColor()));
           gameplayController.endPlayerTurn();
-      }
-      if (plot.getOwner() == null && player.deductFunds(300)) {
+      } else if (plot.getOwner() == null && player.deductFunds(300)) {
         plot.setOwner(player);
-        canvas.getGraphicsContext2D().setFill(player.getColor());
-        canvas.getGraphicsContext2D().fill();
-        canvas.getGraphicsContext2D().stroke();
+        canvas.setEffect(new ColorInput(0,0,47.0, 55.0,player.getColor()));
         gameplayController.endPlayerTurn();
       }
   }
