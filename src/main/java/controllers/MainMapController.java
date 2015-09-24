@@ -59,11 +59,11 @@ public class MainMapController extends Controller {
       if (gameplayController.getRound() <= 2 && plot.getOwner() == null) {
         System.out.println(colorString(player.getColor()));
           plot.setOwner(player);
-          canvas.setEffect(new ColorInput(0,0,47.0, 55.0,player.getColor()));
+          canvas.setEffect(new ColorInput(0,0,55.0, 47.0,player.getColor()));
           gameplayController.endPlayerTurn();
       } else if (plot.getOwner() == null && player.deductFunds(300)) {
         plot.setOwner(player);
-        canvas.setEffect(new ColorInput(0,0,47.0, 55.0,player.getColor()));
+        canvas.setEffect(new ColorInput(0,0,55.0, 47.0,player.getColor()));
         gameplayController.endPlayerTurn();
       }
   }
